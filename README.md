@@ -1,7 +1,7 @@
 
 # TEMPUS
 
-An application for time-managment.
+An application for time-management.
 
 
 ## Tech Stack
