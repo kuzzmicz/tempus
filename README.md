@@ -14,3 +14,21 @@ An application for time management.
 
 **Database:** [![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/) 
 
+## FRONTEND
+## Run Locally
+
+Run the angular project
+
+```bash
+  ng serve
+```
+
+* The project will be running on port **4200**
+
+**localhost:4200**
+
+Stop the terminal 
+
+```bash
+ctrl+c
+```
