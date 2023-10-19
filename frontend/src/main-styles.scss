@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,700');
+
+$light: #FFF5F5;
+$light-magenta: #FADFEE; 
+$magenta: #C27BA0;
+$dark-magenta: #703957; 
+
+$primary: $magenta; 
+$font: "Rubik";
+
+html{
+    background: $light-magenta;
+}
