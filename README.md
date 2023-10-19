@@ -25,10 +25,6 @@ Run the angular project
 
 * The project will be running on port **4200**
 
-**localhost:4200**
+ `http://localhost:4200/`
 
-Stop the terminal 
-
-```bash
-ctrl+c
-```
+To stop the terminal: `ctrl+c`
