@@ -7,11 +7,13 @@ import { TaskViewComponent } from './pages/task-view/task-view.component';
 import { NoteViewComponent } from './pages/note-view/note-view.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { NewListComponent } from './pages/new-list/new-list.component';
 @NgModule({
   declarations: [
     AppComponent,
     TaskViewComponent,
-    NoteViewComponent
+    NoteViewComponent,
+    NewListComponent
   ],
   imports: [
     BrowserModule,
