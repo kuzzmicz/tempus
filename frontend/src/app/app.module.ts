@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TaskViewComponent } from './pages/task-view/task-view.component';
 import { NoteViewComponent } from './pages/note-view/note-view.component';
 
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +15,8 @@ import { NoteViewComponent } from './pages/note-view/note-view.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
