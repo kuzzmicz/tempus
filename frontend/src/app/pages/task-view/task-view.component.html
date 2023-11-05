@@ -1,9 +1,16 @@
-<div class="center has-background-darkmagenta">
+<div class="center">
+  <div class="appBox">
+    <div class="buttonClass">
+    <button class="button is-primary appButton isActive"></button>
+    <button class="button is-primary appButton">CALENDAR</button>
+    <button class="button is-primary appButton" routerLink="/notes">NOTES</button>
+    </div>
+    <div class="panel has-background-light">
    <div class="taskManager">
-     <div class="sidebar has-background-white">
-        <h1 class="title has-text-primary">
-            Lists
-        </h1>
+     <div class="sidebar has-background-light">
+      <div class="titleBox"><h1 class="title has-text-primary">
+        LISTS
+    </h1></div>
         <div class="listMenu">
           <a class="listMenuItem" *ngFor="let list of lists" [routerLink]="['/lists', list._id]" routerLinkActive="isActive">
             <p>{{list.title}}</p>
@@ -12,9 +19,11 @@
           <button class="button is-primary" routerLink="/new-list">+</button>
      </div>
      <div class="tasksList has-background-light">
+      <div class="taskTitle">
         <h1 class="title has-text-primary">
-            Tasks
-        </h1>
+          TASKS
+         </h1>
+         </div>
 
       <div class="task" *ngFor="let task of tasks" (click)="onTaskClick(task)" [ngClass]="{ 'completed': task.completed}">
           <p>{{task.title}}</p>
@@ -23,4 +32,6 @@
      </div>
      
    </div>
+</div>
+</div>
 </div>

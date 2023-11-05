@@ -9,13 +9,15 @@ import { NoteViewComponent } from './pages/note-view/note-view.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NewListComponent } from './pages/new-list/new-list.component';
 import { NewTaskComponent } from './pages/new-task/new-task.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 @NgModule({
   declarations: [
     AppComponent,
     TaskViewComponent,
     NoteViewComponent,
     NewListComponent,
-    NewTaskComponent
+    NewTaskComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,

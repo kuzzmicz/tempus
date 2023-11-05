@@ -1,0 +1,46 @@
+@import '../../../main-styles.scss';
+
+.fullBox{
+    width: 100%;
+    height: 100%;
+    background: $darkmagenta;
+}
+.loginText{
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 4em;
+    font-weight: bold;
+    font-family: 'Rubik';
+}
+.flexBox{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.loginBox{
+    padding: 80px 200px;
+    background: $lightmagenta;
+    border-radius: 250px;
+}
+
+.loginButton{
+    width: 200px;
+    height: 70px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: $magenta;
+    font-family: 'Rubik';
+    font-size: 30px;
+}
+
+.textFlexBox{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.text{
+    margin-top: 20px;
+}
