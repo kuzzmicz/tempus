@@ -16,7 +16,7 @@
             Tasks
         </h1>
 
-      <div class="task" *ngFor="let task of tasks">
+      <div class="task" *ngFor="let task of tasks" (click)="onTaskClick(task)" [ngClass]="{ 'completed': task.completed}">
           <p>{{task.title}}</p>
       </div>
       <button class="addButton button is-primary" routerLink="./new-task">+</button>

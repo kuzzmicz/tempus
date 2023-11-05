@@ -12,7 +12,7 @@ app.use(function (req, res, next) {
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
   if (req.method === 'OPTIONS') {
       res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-      res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH');
+      res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS');
       return res.status(200).json({});
   };
   next();
@@ -92,7 +92,7 @@ app.post('/lists/:listId/tasks', (req, res)=> {
 app.patch('/lists/:listId/tasks/:taskId', (req, res)=> {
     Task.findOneAndUpdate({_id: req.params.taskId, _listId: req.params.listId},
       {$set: req.body}).then(()=>{
-     res.sendStatus(200);
+        res.send({message: "Updated successfully!"})
       })
 })
 /*DESC:usunięcie zadania w okreslonej liscie
