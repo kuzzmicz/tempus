@@ -1,0 +1,131 @@
+@import '../../../main-styles.scss';
+
+.panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    max-height: 780px;
+}
+.appBox{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    max-height: 780px;
+}
+.appButton{
+    width: 100%;
+   
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    &.isActive {
+        background-color: $light;
+     }
+}
+.buttonClass{
+   width:100%; 
+   display: flex;
+   max-width: 1300px;
+}
+.noteTitle{
+    padding: 20px;
+    border-bottom: 20px solid $primary;
+}
+.noteManager{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    max-height: 680px;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 30px;
+    border: 20px solid $primary;
+    box-shadow: 0 0 10px $darkmagenta;
+  margin-right: 20px;
+}
+
+.notesList{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    height: 680px;
+    border: 20px solid $primary;
+    position: relative;
+    box-shadow: 0 0 10px $darkmagenta;
+}
+
+
+.title{
+    text-transform: uppercase;
+    font-family: 'Rubik';
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+.titleBox{
+    padding-bottom:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    font-family: 'Rubik';
+    font-size: 20px;
+}
+.listMenu{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    flex-grow: 1;
+    .listMenuItem{
+     display: flex;
+     align-items: center;
+     padding: 10px 15px;
+     border-radius: 5px;
+     width: 100%;
+     color: $darkmagenta;
+     margin-bottom: 5px;
+     &:hover{
+        background: $light;
+     }
+
+     &.isActive {
+        background-color: $magenta;
+        color: $light;
+     }
+    }
+}
+.button{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.editButton{
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    bottom: 30px; 
+    color: $darkmagenta;
+    right: 160px;
+    background-color: $lightmagenta;
+box-shadow: -14px -3px 30px -12px $magenta;
+}
+.deleteButton{
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    bottom: 30px; 
+    color: $darkmagenta;
+    right: 40px;
+    background-color: $lightmagenta;
+    box-shadow: -14px -3px 30px -12px $magenta;
+}
+
