@@ -5,18 +5,9 @@
             Lists
         </h1>
         <div class="listMenu">
-            <a class="listMenuItem isActive">
-              <p>List</p>
-            </a>
-            <a class="listMenuItem">
-                <p>List</p>
-              </a>
-              <a class="listMenuItem">
-                <p>List</p>
-              </a>
-              <a class="listMenuItem">
-                <p>List</p>
-              </a>
+          <a class="listMenuItem" *ngFor="let list of lists" [routerLink]="['/lists', list._id]" routerLinkActive="isActive">
+            <p>{{list.title}}</p>
+          </a>
           </div>
           <button class="button is-primary" routerLink="/new-list">+</button>
      </div>

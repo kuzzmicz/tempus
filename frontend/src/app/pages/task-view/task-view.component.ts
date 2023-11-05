@@ -10,13 +10,14 @@ import { TaskService } from 'src/app/task.service';
 export class TaskViewComponent{
 
   lists: any;
-  tasks: any;
   constructor(private taskService: TaskService, private route: ActivatedRoute){}
-     ngOnInit(){}
-     createNewList(){
-this.taskService.createList('TEST').subscribe((response: any)=>{
-    console.log(response);
-});
-     }
- 
-}
+     ngOnInit(){
+      this.route.params.subscribe(
+        (params: Params) => {
+        console.log(params);
+        }
+      )
+ this.taskService.getLists().subscribe((lists: any)=>{
+   this.lists=lists;
+ })
+}}
