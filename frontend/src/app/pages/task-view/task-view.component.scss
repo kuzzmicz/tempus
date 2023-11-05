@@ -24,6 +24,7 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     flex-direction: column;
+    position: relative;
 }
 
 .title{
@@ -38,6 +39,7 @@ p{
 }
 .listMenu{
     display: flex;
+    
     flex-direction: column;
     margin-top: 15px;
     flex-grow: 1;
@@ -93,3 +95,11 @@ p{
     }
 }
 
+.addButton{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: 40px; 
+    right: 40px;
+    border-radius:50%;
+}

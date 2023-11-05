@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { List } from 'src/app/models/list.model';
 import { TaskService } from 'src/app/task.service';
 
 @Component({
@@ -7,10 +9,13 @@ import { TaskService } from 'src/app/task.service';
   styleUrls: ['./new-list.component.scss']
 })
 export class NewListComponent {
-  constructor(private taskService: TaskService){}
-  createList(title: string){
-    this.taskService.createList(title).subscribe((response: any)=>{
-       console.log(response);
-    });
-    }
+  constructor(private taskService: TaskService, private router:Router){}
+  createList(title: string) {
+    this.taskService.createList(title).subscribe(next => {
+      const list: List = next as List;
+      console.log(list);
+
+      this.router.navigate([ '/lists', list._id ]);
+    })
+  }
 }
