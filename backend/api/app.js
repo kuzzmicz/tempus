@@ -44,14 +44,21 @@ app.get('/lists', (req, res)=>{
   ENDPOINT: PATCH localhost:3000/lists/:id
 */
 app.patch('/lists/:id', (req, res)=>{
-
+    List.findOneAndUpdate({_id: req.params.id}, {
+        $set: req.body
+     }).then(()=>{
+       res.sendStatus(200);
+     });
 })
 
 /*DESC:usunięcie listy
   ENDPOINT: DELETE localhost:3000/lists/:id
 */
 app.delete('/lists/:id', (req, res)=>{
-
+    List.findOneAndDelete({_id: req.params.id
+    }).then((removedListDoc)=>{
+       res.send(removedListDoc);
+    });
 })
 
 app.listen(3000, ()=>{
