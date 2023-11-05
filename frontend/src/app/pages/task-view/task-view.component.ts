@@ -15,10 +15,11 @@ export class TaskViewComponent{
      ngOnInit(){
       this.route.params.subscribe(
         (params: Params) => {
-        console.log(params);
+        console.log(params['listId']);
+        if(params['listId'] != undefined){
         this.taskService.getTasks(params['listId']).subscribe((tasks: any)=>{
           this.tasks = tasks; 
-        })
+        })}
         }
 
        
