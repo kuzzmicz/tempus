@@ -75,7 +75,7 @@ p{
     padding: 14px 20px;
     border-radius: 7px;
     margin-top: 10px;
-    transition: box-shadow 0.2s ease, transform 0.2s ease; 
+    transition: box-shadow 0.2s ease, transform 0.1s ease; 
     
     &:not(.complete){
         &:hover{
@@ -88,7 +88,7 @@ p{
     }
    
 
-    &.complete{
+    &.completed{
      text-decoration: line-through 2px;
      color: grey;
      opacity: 0.5;
