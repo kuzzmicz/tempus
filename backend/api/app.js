@@ -61,6 +61,61 @@ app.delete('/lists/:id', (req, res)=>{
     });
 })
 
+/*DESC:pobranie wszystkich zadan z okreslonej listy
+  ENDPOINT: GET localhost:3000/lists/listId/tasks
+*/
+app.get('/lists/:listId/tasks', (req, res)=> {
+    Task.find({
+        _listId: req.params.listId
+    }).then((tasks)=>{
+      res.send(tasks);
+    })
+ })
+
+ /*DESC:stworzenie nowego zadania w okreslonej liscie
+  ENDPOINT: POST localhost:3000/lists/listId/tasks
+*/
+app.post('/lists/:listId/tasks', (req, res)=> {
+    let newTask = new Task({
+      title: req.body.title,
+      _listId: req.params.listId
+    });
+    newTask.save().then((newTaskDoc)=>{
+      res.send(newTaskDoc);
+    })
+  })
+  
+  
+/*DESC:aktualizacja zadania w okreslonej liscie
+  ENDPOINT: PATCH localhost:3000/lists/listId/tasks/taskId
+*/
+app.patch('/lists/:listId/tasks/:taskId', (req, res)=> {
+    Task.findOneAndUpdate({_id: req.params.taskId, _listId: req.params.listId},
+      {$set: req.body}).then(()=>{
+     res.sendStatus(200);
+      })
+})
+/*DESC:usunięcie zadania w okreslonej liscie
+  ENDPOINT: DELETE localhost:3000/lists/listId/tasks/taskId
+*/
+app.delete('/lists/:listId/tasks/:taskId', (req, res)=>{
+  Task.findOneAndDelete({_id: req.params.taskId, _listId: req.params.listId
+  }).then((removedTaskDoc)=>{
+     res.send(removedTaskDoc);
+  });
+})
+
+/*DESC:pobranie określonego zadania 
+  ENDPOINT: GET localhost:3000/lists/listId/tasks/taskId
+*/
+app.get('/lists/:listId/tasks/:taskId', (req, res)=> {
+    Task.findOne({
+        _listId: req.params.listId,
+        _id: req.params.taskId
+    }).then((task)=>{
+      res.send(task);
+    })
+  })
 app.listen(3000, ()=>{
 console.log("Server is listening on port 3000");
 })
