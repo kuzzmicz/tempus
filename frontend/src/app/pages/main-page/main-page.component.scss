@@ -2,7 +2,9 @@
 
 
 .noteTitle{
-    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-left:20px;
     border-bottom: 20px solid $primary;
 }
 .calendarManager{
@@ -10,9 +12,8 @@
     width: 100%;
     height: 100%;
     max-width: 1200px;
-    max-height: 680px;
+    max-height: 690px;
 }
-
 .calendarCont{
     display: flex;
     flex-grow: 1;
@@ -28,10 +29,24 @@
 .title{
     text-transform: uppercase;
     font-family: 'Rubik';
-    font-size: 30px;
+    font-size: 40px;
     letter-spacing: 4px;
 }
-
+.line{
+    width:100%;
+    height:10px;
+    background-color: $light;
+}
+.sectionAdd{
+    position: absolute;
+    right: 30px;
+    background-color: $lightmagenta;
+    font-size: 30px;
+    top:25px;
+    width:50px;
+    height:50px;
+    border:none;
+}
 p{
     font-family: 'Rubik';
     font-size: 20px;
@@ -75,6 +90,16 @@ p{
     background-color: $lightmagenta;
 box-shadow: -14px -3px 30px -12px $magenta;
 }
+.editButton{
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    bottom: 30px; 
+    color: $darkmagenta;
+    right: 160px;
+    background-color: $lightmagenta;
+box-shadow: -14px -3px 30px -12px $magenta;
+}
 .deleteButton{
     height: 50px;
     width: 100px;
@@ -85,8 +110,16 @@ box-shadow: -14px -3px 30px -12px $magenta;
     background-color: $lightmagenta;
     box-shadow: -14px -3px 30px -12px $magenta;
 }
-.arrows{
-    height: 80px;
+
+.deleteButton{
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    bottom: 30px; 
+    color: $darkmagenta;
+    right: 40px;
+    background-color: $lightmagenta;
+    box-shadow: -14px -3px 30px -12px $magenta;
 }
 .calendarTitle{
     font-size: 50px;
@@ -108,6 +141,65 @@ box-shadow: -14px -3px 30px -12px $magenta;
     width:fit-content;
     margin-left: 20px;
     margin-right:20px;
+    height: 80px;
+}
+
+.noteManager{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    max-width: 1200px;
+}
+.noteMain{
+    width: 100%;
+    background-color: $magenta;
+    padding-top:20px;
+    padding-bottom:60px;
+}
+.noteCollection{
+    width: 340px;
+    height: 340px;
+    background-color: $light;
+    float: left;
+    margin-left: 22px;
+    margin-right:22px;
+}
+.notesList{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    height: fit-content;
+    border: 20px solid $primary;
+    position: relative;
+    box-shadow: 0 0 10px $darkmagenta;
+}
+.collectionTitle{
+    margin-top:20px;
+    width: 100%;
+    text-align: center;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logout{
+    width: 100px;
+    text-align:center;
+    color: $magenta;
+    font-family: 'Rubik';
+    font-weight: bold;
+    position: absolute;
+    bottom: 13px;
+    right:560px;
+}
+.collTitleCont{
+    height: 50px;
+    width: 200px;
+    font-size:30px;
+    color: $magenta;
+    font-family: 'Rubik';
+    background-color: $lightmagenta;
+    box-shadow: 0 0 10px $darkmagenta;
 }
 .calendar{
     margin-top:50px;
@@ -132,10 +224,31 @@ box-shadow: -14px -3px 30px -12px $magenta;
     text-align: center;
     border: none;
 }
+.mainCont{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        max-width: 1300px;
+        max-height: 1000px;
+        overflow-y: scroll;
+}
 .calendarSquareNotActive{
     height: 90px;
     width: 100px;
     margin-left:8px;
     margin-right: 8px;
     background-color: $magenta;
+}
+.panel{
+    margin-top:20px;
+
+}
+.panelCollections{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    max-width: 1300px;
 }

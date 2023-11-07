@@ -6,16 +6,19 @@ import { NewListComponent } from './pages/new-list/new-list.component';
 import { NewTaskComponent } from './pages/new-task/new-task.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { CalendarViewComponent } from './pages/calendar-view/calendar-view.component';
+import { MainPageComponent } from './pages/main-page/main-page.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'lists', pathMatch:"full"},
+  {path: '', component: MainPageComponent},
   {path:'notes', component: NoteViewComponent},
   {path:'new-list', component: NewListComponent},
   {path: 'lists/:listId', component: TaskViewComponent},
   {path: 'lists', component: TaskViewComponent},
   {path: 'lists/:listId/new-task', component: NewTaskComponent},
   {path: 'login', component: LoginPageComponent},
-  {path: 'calendar', component: CalendarViewComponent}
+  {path: 'calendar', component: CalendarViewComponent}, 
+  {path: 'register', component: RegisterComponent}
 ];
 
 @NgModule({
