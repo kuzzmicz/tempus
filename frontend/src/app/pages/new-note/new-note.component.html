@@ -1,0 +1,13 @@
+<div class="center">
+    <div class="modalBox">
+        <h1 class="title">Create a new note</h1>
+        <input #noteTitleInput class="input has-background-light is-medium" type="text" placeholder="Type your note's title">
+        <input #noteTextInput class="input has-background-light is-medium" type="text" placeholder="Type your note">
+          <br><br>
+        <div class="buttons is-right">
+            
+     <button class="button is-medium" routerLink="/notes">Cancel</button>
+     <button class="button is-primary is-medium" (click)="createNote(noteTitleInput.value, noteTextInput.value)">Create</button>
+          </div>
+</div>
+</div>
