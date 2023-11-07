@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NewListComponent } from './pages/new-list/new-list.component';
 import { NewTaskComponent } from './pages/new-task/new-task.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { CalendarViewComponent } from './pages/calendar-view/calendar-view.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
     NoteViewComponent,
     NewListComponent,
     NewTaskComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    CalendarViewComponent
   ],
   imports: [
     BrowserModule,
