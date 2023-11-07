@@ -1,9 +1,10 @@
 
-# TEMPUS
-
 **W razie problemów prosimy o kontakt na email dorokhova.mariia@gmail.com**
+**UWAGA!** Aby backend aplikacji działał, należy dodać swój IP do clustera na MongoDB Atlas. W folderze "documentation" znajduje się filmik pokazujący jak działa nasza aplikacja.
 
+# TEMPUS
 An application for time management.
+
 
 
 ## Tech Stack
