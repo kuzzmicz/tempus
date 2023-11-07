@@ -4,11 +4,15 @@
         <a routerLink="/"><img class="logo" src="assets/logo.png" alt="logo"/></a></div>
     <div class="buttonClass">
     <button class="button is-primary appButton" routerLink="/lists">TASKS</button>
-    <button class="button is-primary appButton isActive"></button>
+    <button class="button is-primary appButton" routerLink="/calendar">CALENDAR</button>
     <button class="button is-primary appButton" routerLink="/notes">NOTES</button>
     </div>
+    <div class="line"></div>
+    <div class="mainCont has-background-light">
     <div class="panel has-background-light">
-    <div class="calendarManager">
+
+
+    <div class="calendarManager" >
         <div class="sidebar has-background-light">
            <div class="titleBox"><h1 class="title has-text-primary">
                TASKS
@@ -25,9 +29,8 @@
         </div>
         <div class="calendarCont has-background-dark">
             <div class="arrTitleCont">
-               <div class="arrowCont"> <img src="assets/left-arrow.png" class="arrows"/></div>
+              
             <div class="titleCont"><H1 class="title has-text-light calendarTitle">NOVEMBER 2023</H1></div>
-            <div class="arrowCont"> <img src="assets/right-arrow.png" class="arrows"/></div>
          
         </div>
         <div class="calendar">
@@ -81,6 +84,37 @@
         </div>
       </div>
    </div>
+  
+
+   <div class="panelCollections has-background-light">
+    <div class="noteManager">
+        
+        <div class="notesList has-background-light" >
+          <div class="noteTitle">
+          <h1 class="title has-text-primary">
+               NOTES
+           </h1>
+           <button class="sectionAdd" >+</button>
+           </div>
+           <div class="noteMain">
+             <div class="notesRow">
+                   <div class="noteCollection">
+                    <div class="collectionTitle"><div class="collTitleCont">FAVOURITE</div></div>
+                   </div>
+                   <div class="noteCollection">
+                    <div class="collectionTitle"><div class="collTitleCont">SCHOOL</div></div>
+                   </div> 
+                   <div class="noteCollection">
+                    <div class="collectionTitle"><div class="collTitleCont">RECIPES</div></div>
+                   </div>
+             </div>
+            </div>
+        </div>
+      </div>
+   </div>
+  
+    </div>
+        
   </div>  
   <a routerLink="/login"><div class="logout"><p>LOG OUT</p></div></a>
   </div>

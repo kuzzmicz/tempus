@@ -11,6 +11,8 @@ import { NewListComponent } from './pages/new-list/new-list.component';
 import { NewTaskComponent } from './pages/new-task/new-task.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { CalendarViewComponent } from './pages/calendar-view/calendar-view.component';
+import { MainPageComponent } from './pages/main-page/main-page.component';
+import { RegisterComponent } from './pages/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,9 @@ import { CalendarViewComponent } from './pages/calendar-view/calendar-view.compo
     NewListComponent,
     NewTaskComponent,
     LoginPageComponent,
-    CalendarViewComponent
+    CalendarViewComponent,
+    MainPageComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

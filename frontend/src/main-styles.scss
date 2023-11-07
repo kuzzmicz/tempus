@@ -41,7 +41,16 @@ html, body{
     border-radius:10px;
     padding: 40px;
     }
-
+    .logout{
+        width: 100px;
+        text-align:center;
+        color: $magenta;
+        font-family: 'Rubik';
+        font-weight: bold;
+        position: absolute;
+        bottom: 13px;
+        right:560px;
+    }
     .panel{
         display: flex;
         justify-content: center;
