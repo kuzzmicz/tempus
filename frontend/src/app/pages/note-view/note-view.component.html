@@ -14,20 +14,14 @@
                Notes
            </h1></div>
            <div class="listMenu">
-               <a class="listMenuItem isActive">
-                 <p>Note</p>
-               </a>
-               <a class="listMenuItem">
-                   <p>Note</p>
-                 </a>
-                 <a class="listMenuItem">
-                   <p>Note</p>
-                 </a>
-                 <a class="listMenuItem">
-                   <p>Note</p>
-                 </a>
+            <a class="listMenuItem isActive">
+              <p>Test</p>
+            </a>
+                 <a class="listMenuItem" *ngFor="let note of notes" [routerLink]="['/notes', note._id]" routerLinkActive="isActive">
+                  <p>{{note.title}}</p>
+                </a>
              </div>
-             <button class="button is-primary">+</button>
+             <button class="button is-primary" routerLink="/new-note">+</button>
         </div>
         <div class="notesList has-background-light">
           <div class="noteTitle">
@@ -35,6 +29,8 @@
                A title
            </h1>
            </div>
+           <div class="text">
+           <p>Hello, world!</p></div>
            <button class="editButton button is-primary">Edit</button>
            <button class="deleteButton button is-primary">Delete</button>
         </div>

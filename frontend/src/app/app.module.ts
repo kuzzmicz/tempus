@@ -13,6 +13,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { CalendarViewComponent } from './pages/calendar-view/calendar-view.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { NewNoteComponent } from './pages/new-note/new-note.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { RegisterComponent } from './pages/register/register.component';
     LoginPageComponent,
     CalendarViewComponent,
     MainPageComponent,
-    RegisterComponent
+    RegisterComponent,
+    NewNoteComponent
   ],
   imports: [
     BrowserModule,

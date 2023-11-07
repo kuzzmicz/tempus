@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const {mongoose} = require('./db/mongoose');
 const bodyParser = require('body-parser');
-const { List, Task, User } = require('./db/models');
+const { List, Task, User, Note } = require('./db/models');
 //CRUD - CREATE READ UPDATE DELETE
 
 
@@ -155,6 +155,40 @@ app.get('/lists/:listId/tasks/:taskId', (req, res)=> {
     })
   })
 
+//NOTATKI
+/*DESC: stworzenie nowej notatki, JSON w body requestu
+  ENDPOINT: POST localhost:3000/notes
+*/
+app.post('/notes', (req, res)=>{
+  let title = req.body.title;
+  let text = req.body.text;
+  let newNote = new Note({
+   title,
+   text
+  });
+  newNote.save().then((listDoc)=> {
+    res.send(listDoc);
+  })
+})
+
+/*DESC: pobranie listy wszystkich notatek z bazy danych
+  ENDPOINT: GET localhost:3000/notes
+*/
+app.get('/notes', (req, res)=>{
+  Note.find({}).then((notes)=>{
+      res.send(notes)
+    });
+})
+app.get('/notes/:noteId', (req, res)=> {
+  Note.find({
+      _noteId: req.params.noteId
+  }).then((note)=>{
+    res.send(note);
+  })
+})
+
+
+//LOGOWANIE
 app.post('/users', (req, res)=>{
   let body = req.body;
   let newUser = new User(body);
