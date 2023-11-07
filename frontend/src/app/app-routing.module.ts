@@ -5,6 +5,7 @@ import { NoteViewComponent } from './pages/note-view/note-view.component';
 import { NewListComponent } from './pages/new-list/new-list.component';
 import { NewTaskComponent } from './pages/new-task/new-task.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { CalendarViewComponent } from './pages/calendar-view/calendar-view.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'lists', pathMatch:"full"},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'lists/:listId', component: TaskViewComponent},
   {path: 'lists', component: TaskViewComponent},
   {path: 'lists/:listId/new-task', component: NewTaskComponent},
-  {path: 'login', component: LoginPageComponent}
+  {path: 'login', component: LoginPageComponent},
+  {path: 'calendar', component: CalendarViewComponent}
 ];
 
 @NgModule({

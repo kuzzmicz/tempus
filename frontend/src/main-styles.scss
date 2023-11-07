@@ -7,6 +7,7 @@ $darkmagenta: #703957;
 $font: "Rubik";
 $primary: $magenta;
 $link: $darkmagenta;
+$dark: $magenta;
 body{
     background-color: $lightmagenta;
 }
@@ -28,7 +29,9 @@ html, body{
     width: 100%;
     height: 100%;
 }
-
+.logo{
+    width: 450px;
+}
 
 .modalBox{
     min-height: 200px;
@@ -48,13 +51,19 @@ html, body{
         max-width: 1300px;
         max-height: 780px;
     }
+    .logoCont{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .appBox{
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 100%;
         max-width: 1300px;
-        max-height: 780px;
+        max-height: 1000px;
     }
     .appButton{
         width: 100%;
