@@ -1,6 +1,8 @@
 
 # TEMPUS
 
+**W razie problemów prosimy o kontakt na email dorokhova.mariia@gmail.com**
+
 An application for time management.
 
 
